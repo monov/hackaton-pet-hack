@@ -1,0 +1,107 @@
+.app-login-body{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.app-login-pic-wrapper{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-login-pic{
+  height: 450px;
+  width: 450px;
+
+  background:url(/this-guy.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.other-shit{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.other-shit-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  height: 500px;
+  width: 400px;
+}
+
+.other-shit-form h1{
+  font-weight: 400;
+}
+
+.app-login.input{
+  height: 40px;
+  width: 300px;
+  outline: none;
+  border: none;
+  background: #F8F8F8;
+  border-radius: 12px;
+  color: gray;
+  padding-left: 20px;
+  margin-top: 1rem;
+}
+
+.button{
+  height: 40px;
+  width: 300px;
+  margin-top: 1rem;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: var(--main-color);
+  cursor: pointer;
+}
+
+.ya-loh{
+  margin-top: 2rem;
+  background: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.error-cant-login{
+  position: absolute;
+  height: 40px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #EC0000;
+  color: #EC0000;
+  border-radius: 12px;
+  right: 10px;
+  top: 10px;
+  transition: .2s;
+}
+
+.app-login.input.pass{
+  margin-top: 0;
+}
+
+.pass-input-warpper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background: #F8F8F8;
+  height: 40px;
+  width: 300px;
+  border-radius:12px ;
+  padding-right: 15px;
+}

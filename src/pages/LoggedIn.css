@@ -1,0 +1,12 @@
+.loggedin-pic{
+  height: 450px;
+  width: 450px;
+  background:url(/this-guy.png) ;
+  background-position: center;
+  background-size: contain;
+}
+
+.p{
+  margin-top: 1.5rem;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+
+#root {
+  height: 100vh;
+  text-align: center;
+  background: white;
+}
+
+
+.app-body{
+  height: 100%;
+  width: 100% ;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
