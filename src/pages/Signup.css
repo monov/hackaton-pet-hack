@@ -69,3 +69,22 @@
 .button.rein{
   margin-top: 2rem;
 }
+
+@media (450px > width) {
+  .app-login-pic-wrapper{
+    display: none;
+  }
+
+  .other-shit{
+    width: 100%;
+  }
+
+  .app-signup-body{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-back{
+    left: 10px;
+  }
+}
