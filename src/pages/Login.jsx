@@ -43,7 +43,7 @@ const Login = () => {
         let data = await response.json();
         localStorage.setItem("authToken", data.token);
         localStorage.setItem("userName", data.username);
-        navigate(`/cabinet/${localStorage.getItem('userName')}`);
+        navigate(`/cabinet`);
       } else if (response.status === 401) {
         setPass((e) => !e);
       } else {

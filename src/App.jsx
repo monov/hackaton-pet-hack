@@ -7,13 +7,12 @@ import LoggedIn from "./pages/LoggedIn";
 import Signup from "./pages/Signup";
 
 function App() {
-  const username = localStorage.getItem('userName'); 
   return (
     <div className="app-body">
       <Routes>
         <Route path="/" element={<Login />}></Route>
         <Route
-          path={`/cabinet/${username}`}
+          path={`/cabinet/`}
           element={
            <LoggedIn />
           }

@@ -244,9 +244,10 @@ const Verify = ({ verify, setVerify, email }) => {
     if (response.status === 200) {
       console.log("vse chetka");
       let data = await response.json();
+      console.log(data)
       localStorage.setItem("authToken", data.token);
       localStorage.setItem("userName", data.username);
-      navigate(`/cabinet/${localStorage.getItem("userName")}`);
+      navigate(`/cabinet`);
     }
   };
   return (
