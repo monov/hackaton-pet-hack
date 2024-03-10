@@ -71,7 +71,7 @@ const Signup = () => {
       password: signupPassword,
     };
 
-    fetch(`${api}api/signup`, {
+    fetch(`${api}api/signup/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
