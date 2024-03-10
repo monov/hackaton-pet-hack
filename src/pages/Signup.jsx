@@ -202,6 +202,7 @@ const Signup = () => {
 export default Signup;
 
 const Verify = ({ verify, setVerify, email }) => {
+  const navigate = useNavigate()
   const api = import.meta.env.VITE_API_BASE_URL;
   const [inputValues, setInputValues] = useState(["", "", "", ""]);
   const backHandle = () => {
@@ -225,21 +226,27 @@ const Verify = ({ verify, setVerify, email }) => {
       }
     }
   };
-  const assembleInputs = async() => {
+  const assembleInputs = async () => {
     const assembledValue = inputValues.join("");
     console.log("Assembled Value:", assembledValue);
+    const data = {
+      email: email,
+      code: assembledValue,
+    };
+
     const response = await fetch(`${api}api/verify-email/`, {
       method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(assembledValue),
-    })
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
     if (response.status === 200) {
       console.log("vse chetka");
       let data = await response.json();
       localStorage.setItem("authToken", data.token);
-      navigate(`/cabinet/${localStorage.getItem('userName')}`);
+      localStorage.setItem("userName", data.username);
+      navigate(`/cabinet/${localStorage.getItem("userName")}`);
     }
   };
   return (
@@ -297,7 +304,9 @@ const Verify = ({ verify, setVerify, email }) => {
               onChange={(e) => handleInputChange(3, e)}
             />
           </div>
-          <button className="button rein" onClick={assembleInputs}>Подтвердить</button>
+          <button className="button rein" onClick={assembleInputs}>
+            Подтвердить
+          </button>
           <p className="p">Выслать код повторно</p>
         </div>
       </div>
