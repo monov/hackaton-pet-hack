@@ -79,7 +79,7 @@ const Signup = () => {
       body: JSON.stringify(signupData),
     })
       .then((response) => {
-        if (response.status == 200) {
+        if (response.status == 201) {
           console.log("Signup successful");
         } else {
           alert("Signup failed. Please try again.");
